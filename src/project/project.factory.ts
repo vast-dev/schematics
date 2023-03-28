@@ -1,5 +1,5 @@
 import { externalSchematic, Rule } from "@angular-devkit/schematics";
-import { ProjectOptions } from "./project.schema.d";
+import { ProjectOptions } from "./project.schema";
 
 // You don't have to export the function as default. You can also have more than one rule factory
 // per file.

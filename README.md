@@ -1,28 +1,22 @@
-# Getting Started With Schematics
+# Vast Schematics
+This library is responsible for generating NestJS code using Angular schematics. 
 
-This repository is a basic Schematic implementation that serves as a starting point to create and publish Schematics to NPM.
 
-### Testing
+## Guidelines
+Schematics in this repo should follow a few rules:
+ - They should have no knowledge of Vast JSON files
+ - Any files processed by schematics should contain one of the following:
+     - ASTs in JSON format
+     - Raw code
+ - They should not contain any logic for processing Vast meta JSON files 
 
-To test locally, install `@angular-devkit/schematics-cli` globally and use the `schematics` command line tool. That tool acts the same as the `generate` command of the Angular CLI, but also has a debug mode.
 
-Check the documentation with
+## Packages  
+Vast is made up of several packages spread across different repositories.
 
-```bash
-schematics --help
-```
-
-### Unit Testing
-
-`npm run test` will run the unit tests, using Jasmine as a runner and test framework.
-
-### Publishing
-
-To publish, simply do:
-
-```bash
-npm run build
-npm publish
-```
-
-That's it!
+| Package | Description        |
+|---------|--------------------|
+| [Core](https://github.com/vast-dev/vast) | Contains all the logic for processing JSON files and calling the corresponding schematics. |
+| [Meta Schematics](https://github.com/vast-dev/meta-schematics) | An Angular Schematic library used to generate Vast JSON files |
+| [Schematics](https://github.com/vast-dev/schematics) | An Angular Schematic library used to generate NestJS code from Vast JSON files |
+| [Vast CLI](https://github.com/vast-dev/vast-cli) | A CLI tool for generating Vast projects and compiling them to Typescript |

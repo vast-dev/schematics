@@ -3,7 +3,7 @@ import {
   Rule,
 } from "@angular-devkit/schematics";
 
-import { SubAppOptions, NestSubAppOptions } from "./app.schema.d";
+import { SubAppOptions, NestSubAppOptions } from "./app.schema";
 
 // You don't have to export the function as default. You can also have more than one rule factory
 // per file.

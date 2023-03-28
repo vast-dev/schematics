@@ -8,6 +8,10 @@
     "app": {
       "description": "A blank schematic.",
       "factory": "./app/app.factory#main"
+    },
+    "schema": {
+      "description": "A blank schematic.",
+      "factory": "./schema/schema.factory#main"
     }
   }
 }
